@@ -8,30 +8,38 @@ min-height: 500px;
 width: 90%;
 margin: auto;
 padding-top: 10px;
-border: 2px solid black;
-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.616);
+background-color: rgb(110, 27, 110);
+/* border: 2px solid black; */
+border-radius: 10px;
+box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.425);
 color: white;
 font-weight: bold;}
 
 #inpName, #inpAge {padding: 5px;
 border: none;
 border-radius: 3px;
-margin: 0px 10px;}
+margin: 0px 10px;
+margin: auto;
+width: 80%;}
 
-label {margin-left: 10px;}
+label {margin-left: 10px;
+padding: 8px 0px;
+margin: auto;}
 
-#criar {padding: 5px;
+#criar {padding: 10px;
 border: none;
 border-radius: 3px;
-width: 180px;
+width: 82%;
 cursor: pointer;
 background-color: rgb(0, 82, 0);
 color: white;
 font-weight: bold;
-margin-bottom: 20px;
-margin-left: 10px;}
+margin: auto;
+margin-top: 10px;}
 
-section {background-color: rgba(0, 255, 255, 0.247);
+#criar:hover {background-color: rgb(22, 138, 22);}
+
+section {background-color: rgb(110, 27, 110);
 padding: 0px 5px;
 align-self: stretch;
 display: flex;
@@ -40,9 +48,11 @@ justify-content: space-around;
 /* display: grid;
 grid-template-rows: 10% 1fr;
 grid-template-columns: repeat(4, 1fr); */
-height: 100%;}
+height: 100%;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;}
 
-.cards {background-color: rgb(65, 64, 64);
+.cards {background-color: rgb(65, 37, 65);
 flex-basis: 280px;
 flex-shrink: 0;
 flex-grow: 1;
@@ -50,4 +60,29 @@ margin: 5px 5px;
 border-radius: 5px;
 padding: 5px;}
 
-#display {padding-left: 10px;}
+.cards:hover {flex-basis: 290px;
+background-color: rgb(128, 75, 128);}
+
+#textoDeFora {padding-left: 10px;
+margin: auto;
+margin-top: 20px;}
+
+
+
+/* TELAS GRANDES */
+@media screen and (min-width: 768px) {
+    
+
+    #criar, #inpName, #inpAge {width: 280px;
+    margin: 0px;
+    margin-left: 20px;}
+
+    #criar {margin-top: 10px;
+    width: 290px;}
+
+    #textoDeFora {margin: 0;
+    margin: 10px 0px 5px 10px;}
+
+    label {margin: 0px;
+    margin-left: 20px;}
+}
