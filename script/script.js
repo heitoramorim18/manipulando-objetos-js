@@ -1,6 +1,8 @@
 const botaoEnviar = document.getElementById('criar')
-const displayResultado = document.getElementById('display')
+// const displayResultado = document.getElementById('display')
+const secao = document.getElementsByTagName('section')[0]
 let todasAsPessoas = []
+
 
 class pessoa {
     constructor (iNome, iDade) {
@@ -19,10 +21,13 @@ botaoEnviar.addEventListener('click', () => {
 
     else {
         const novaPessoa = new pessoa(nomeIndividuo.value, idadeIndividuo.value)
-
         todasAsPessoas.push(novaPessoa)
 
-        displayResultado.innerHTML = `Nome: ${novaPessoa.nome} <br> Idade: ${novaPessoa.idade} anos`
+        const divNova = document.createElement('div')
+        divNova.setAttribute('class', 'cards')
+        divNova.innerHTML = `<h3>${nomeIndividuo.value}</h3>
+        Idade: ${idadeIndividuo.value} anos`
+        secao.appendChild(divNova)
 
         nomeIndividuo.value = ""
         idadeIndividuo.value = null
